@@ -1,0 +1,144 @@
+* {
+    padding: 0;
+    margin: 0;
+    color: hsl(24, 9.8%, 10%);
+    font-family: sans-serif;
+}
+
+li {
+    list-style-type: none;
+}
+
+body {
+    padding: 3rem clamp(2rem, 10%, 10rem);
+}
+
+.nav {
+    font-size: 1rem;
+    text-align: justify;
+
+    div, nav {
+        display: inline-block;
+        width: fit-content;
+        vertical-align: middle;
+    }
+
+    &::after {
+        display: inline-block;
+        width: 100%;
+        content: "";
+    }
+
+    h1 {
+        font-size: 1.2rem;
+
+        a {
+            text-decoration: none;
+        }
+    }
+
+    nav {
+        li {
+            display: inline-block;
+            padding: 0 0.1rem 0 0.1rem;
+        }
+    }
+
+}
+
+.bg-img, .bg-blur {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+}
+
+.bg-blur {
+    background-color: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(60px) saturate(2);
+}
+
+.hero {
+    text-align: justify;
+
+    &::after{
+        content: "";
+        display: inline-block;
+        width: 100%;
+    }
+
+    & > div {
+        display: inline-block;
+        width: fit-content;
+        max-width: 40%;
+    }
+
+    h2 {
+        margin: 1rem 0;
+        font-size: 3rem;
+    }
+
+    .hero__cta {
+        margin: 2rem 0;
+        padding: 1rem 2.5rem;
+    }
+
+    .hero__icon{
+        margin: 0 clamp(1px, 1%, 0.5rem);
+    }
+
+    .hero__img {
+        display: inline-block;
+        aspect-ratio: 1/1;
+        width: 50%;
+        object-fit: cover;
+        min-width: 100px;
+        max-width: 300px;
+    }
+}
+
+.btn {
+    display: inline-block;
+    padding: 1rem 2rem;
+    border-radius: 1rem;
+    background-color: transparent;
+    border: none;
+    box-shadow: 0px 4px 6px -1px rgb(0 0 0 / 0.5), 0px 2px 4px -2px rgb(0 0 0 / 0.5);
+}
+
+.btn--primary {
+    background-color: hsl(24, 9.8%, 10%);
+    color: white;
+}
+
+.btn--icon {
+    display: inline-block;
+    padding: 0;
+    aspect-ratio: 1 / 1;
+    border-radius: 1rem;
+    background-color: hsla(0, 0%, 100%, 0.5);
+    backdrop-filter: blur(60px) saturate(2);
+    font-size: 1.5rem;
+    width: 3rem;
+    text-align: center;
+    line-height: 3rem;
+}
+
+.btn--whatsapp {
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+    border-radius: 9999px;
+    width: 5rem;
+    line-height: 5rem;
+    background-color: hsl(142, 70%, 49%);
+
+    svg {
+        height: 4rem;
+        vertical-align: middle;
+        fill: white;
+    }
+}
