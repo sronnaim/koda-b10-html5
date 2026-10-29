@@ -455,3 +455,39 @@ body {
         }
     }
 }
+
+.page-footer {
+    padding: 1rem 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+
+    @media (width >= 40rem) {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    & > a {
+        text-transform: uppercase;
+        font-weight: 600;
+    }
+
+    & > nav, & > address {
+        h2 {
+            font-size: 1rem;
+
+            @media (width >= 40rem) {
+                margin-bottom: 1rem;            
+            }
+        }
+    }
+
+    & > nav > ul, & > address > div {
+        display: flex;
+        flex-direction: column;
+
+        @media (width >= 40rem) {
+            gap: 1rem;            
+        }
+    }
+}
