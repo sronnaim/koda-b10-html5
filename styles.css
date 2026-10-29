@@ -1,10 +1,16 @@
 :root {
+    --primary: hsl(0, 100%, 7%);
 }
 
 * {
     color: hsl(3, 90%, 8%);
     padding: 0;
     margin: 0;
+    font-family: sans-serif;
+}
+
+li {
+    list-style-type: none;
 }
 
 body {
@@ -19,15 +25,72 @@ body {
     }
 
     .bg-blur {
-        background-color: hsl(0, 0%, 100%, 0.1);
-        backdrop-filter: blur(60px) saturate(1.1);
+        background-color: hsl(0, 0%, 100%, 0.4);
+        backdrop-filter: blur(20px) saturate(1.1);
+    }
+
+    .btn {
+        padding: 0.4rem 1rem;
+        border-radius: 1rem;
+        color: white;
+        background-color: var(--primary);
+    }
+
+    .btn--ghost {
+        color: inherit;
+        background-color: transparent;
+    }
+}
+
+
+.page-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    position: sticky;
+    top: 0;
+    left: 0;
+    background-color: hsl(0, 0%, 100%, 0.01);
+    backdrop-filter: blur(60px);
+
+    & > :first-child {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+
+        a { 
+            font-weight: 600;
+         }
+    }
+
+    a {
+        text-decoration: none;
+        font-size: 1.2rem;
+    }
+
+    & > nav {
+        & > ul {
+            & > :not(:last-child) {
+                display: none;
+            }
+
+            @media (width >= 40rem) {
+                display: flex;
+                
+                & > :not(:last-child) {
+                    display: inline-block;
+                }
+
+            }
+        }
     }
 }
 
 .hero {
-
     .hero__img {
         aspect-ratio: 1 / 1;
         max-width: 250px;
     }
+
 }
