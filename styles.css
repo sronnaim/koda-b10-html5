@@ -93,6 +93,12 @@ body {
         backdrop-filter: blur(20px);
         border: none;
     }
+
+    .btn--whatsapp {
+        position: fixed;
+        right: 40px;
+        bottom: 40px;
+    }
 }
 
 .page-header {
@@ -202,6 +208,7 @@ body {
 
     @media (width >= 40rem) {
         grid-template-columns: 3fr 2fr;
+        gap: 2rem;
     }
     
     & > * {
@@ -329,4 +336,71 @@ body {
             max-width: 350px;
         }
     }
+}
+
+.app-showcase {
+    display: flex;
+    flex-direction: column;
+    padding: 1rem 2rem;
+    gap: 6rem;
+
+    @media (width >= 40rem) {
+        flex-direction: row;
+        align-items: center;
+        gap: 2rem;
+    }
+    
+    & > :first-child {
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+
+        .app-showcase__btns-container {
+            display: flex;
+            gap: 1rem;
+
+            & > a {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                width: fit-content;
+                padding: 0.8rem;
+
+                & > svg {
+                    aspect-ratio: 1/1;
+                    width: 2rem;
+                    
+                    & > path {
+                        fill: var(--primary)
+                    }
+                }
+            }
+        }
+    }
+
+    & > :last-child {
+        display: flex;
+        order: -1;
+        gap: 2rem;
+        justify-content: center;
+
+        @media (width >= 40rem) {
+            gap: 1rem;
+        }
+
+        .app-showcase__img-container {
+            display: flex;
+            justify-content: center;
+            width: fit-content;
+
+            img {
+                aspect-ratio: 9/19.5;
+                max-height: 450px;
+                border-radius: 1.5rem;
+                overflow: hidden;
+                object-fit: contain;
+                margin: 1rem;
+            }
+        }
+    }    
 }
