@@ -10,7 +10,15 @@ li {
 }
 
 body {
-    padding: 3rem clamp(2rem, 10%, 10rem);
+    padding: 3rem clamp(2rem, 5%, 4rem);
+    height: fit-content;
+    text-align: center;
+
+    main {
+        display: inline-block;
+        width: 100%;
+        max-width: 64rem;
+    }
 }
 
 .nav {
@@ -40,7 +48,7 @@ body {
     nav {
         li {
             display: inline-block;
-            padding: 0 0.1rem 0 0.1rem;
+            padding: 0 1rem;
         }
     }
 
@@ -73,7 +81,8 @@ body {
     & > div {
         display: inline-block;
         width: fit-content;
-        max-width: 40%;
+        max-width: 50%;
+        vertical-align: middle;
     }
 
     h2 {
@@ -92,10 +101,11 @@ body {
 
     .hero__img {
         display: inline-block;
+        vertical-align: middle;
         aspect-ratio: 1/1;
         width: 50%;
         object-fit: cover;
-        min-width: 100px;
+        min-width: 200px;
         max-width: 300px;
     }
 }
